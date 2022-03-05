@@ -39,7 +39,7 @@ export default {
   padding-left: 100px;
   text-align: left;
   @include mobile{
-    padding: 0px 1rem;
+    padding: 0px;
   }
   &__row {
     position: relative;
@@ -105,7 +105,7 @@ export default {
     text-overflow: ellipsis;
     @include mobile{
       margin: 1rem 0 0 0;
-      height: 45px;
+      height: 40px;
       -webkit-line-clamp: 2;
     }
   }
