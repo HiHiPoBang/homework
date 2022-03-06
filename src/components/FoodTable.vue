@@ -12,10 +12,10 @@
     <tbody class="FoodTable__body">
       <tr
         class="FoodTable__row"
-        v-for="(food, index) in list"
+        v-for="food in list"
         :key="food.ID"
       >
-        <th class="FoodTable__col FoodTable__col--no">{{ index + 1 }}</th>
+        <th class="FoodTable__col FoodTable__col--no">{{ food.No }}</th>
         <th class="FoodTable__col FoodTable__col--city">{{ food.City }}</th>
         <th class="FoodTable__col FoodTable__col--town">{{ food.Town }}</th>
         <th class="FoodTable__col FoodTable__col--name">{{ food.Name }}</th>

@@ -25,14 +25,13 @@ export default {
         return val > 0;
       }
     },
-    total : {
+    total: {
       type: Number,
       default: 1
-    }
-  },
-  data () {
-    return {
-      currentPage: 1,
+    },
+    currentPage: {
+      type: Number,
+      default: 1
     }
   },
   computed: {
@@ -43,7 +42,6 @@ export default {
   },
   methods: {
     pageChangeHandler (page = 1) {
-      this.currentPage = page;
       this.$emit('change-page', { page });
     }
   }
@@ -66,6 +64,7 @@ export default {
     flex-wrap: wrap;
   }
   &__button {
+    margin-left: 1rem;
     outline: 0px;
     border-width: 0px;
     padding: .25rem .5rem;

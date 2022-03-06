@@ -1,5 +1,5 @@
 <template>
-  <select class="BaseSelect" v-model="selectValue">
+  <select class="BaseSelect" v-model="selectValue" @change="$emit('change', selectValue)">
     <option value="" disabled selected>{{ placeholder }}</option>
     <option v-for="option in options" :key="option.value" :value="option.value">
       {{ option.text }}
@@ -25,6 +25,11 @@ export default {
   data() {
     return {
       selectValue: ''
+    }
+  },
+  watch: {
+    options() {
+      this.selectValue = ''
     }
   }
 }
