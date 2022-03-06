@@ -1,8 +1,10 @@
 <template>
   <div id="app" class="App">
-    <h1 class="App__title">農村地方美食小吃特色料理</h1>
-    <food-introduction class="App__foodIntroduction"/>
-    <advertisement-block class="App__advertisementBlock"/>
+    <header><h1 class="App__title">農村地方美食小吃特色料理</h1></header>
+    <main class="App__main">
+      <food-introduction class="App__foodIntroduction"/>
+      <advertisement-block class="App__advertisementBlock"/>
+    </main>
     <BaseFooter class="App__footer"/>
   </div>
 </template>
@@ -46,11 +48,15 @@ p {
   min-height: 100vh;
   padding-bottom: 100px;
   background-color: #eeeeee;
+  &__main {
+    display: flex;
+  }
   &__title {
     padding: 2rem 1rem 0 1rem;
     text-align: center;
   }
   &__advertisementBlock{
+    flex-grow: 1;
     @include mobile{
       display: none;
     }

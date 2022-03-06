@@ -76,7 +76,7 @@ export default {
   &__city {
     position: absolute;
     top: 0;
-    left: -64px;
+    left: -60px;
     @include mobile{
       position: static;
     }
