@@ -97,7 +97,7 @@ export default {
   data () {
     return {
       MODE_TYPE_MAP,
-      mode: MODE_TYPE_MAP.table,
+      mode: MODE_TYPE_MAP.list,
       list: [],
       currentCity: null,
       currentTown: null,
