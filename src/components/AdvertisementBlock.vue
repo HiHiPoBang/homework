@@ -12,10 +12,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/rwd.scss';
 .AdvertisementBlock {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @include mobile {
+    display: none;
+  }
   &__adImg {
     margin-bottom: 1rem;
     &--final {

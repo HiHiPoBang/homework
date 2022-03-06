@@ -57,9 +57,6 @@ p {
   }
   &__advertisementBlock{
     flex-grow: 1;
-    @include mobile{
-      display: none;
-    }
   }
   &__footer {
     position: fixed;

@@ -199,6 +199,7 @@ export default {
     @include mobile {
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
   }
   &__select {
