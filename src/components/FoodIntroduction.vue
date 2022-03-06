@@ -63,6 +63,7 @@
       :currentPage="currentPage"
       @change-page="currentPage = $event.page"
     />
+    <loading-block :isLoading="isLoading" />
   </div>
 </template>
 
@@ -75,6 +76,7 @@ import FoodList from './FoodList.vue';
 import FoodTable from './FoodTable.vue';
 import FoodCardGroup from './FoodCardGroup.vue'
 import BasePagination from './BasePagination.vue';
+import LoadingBlock from './LoadingBlock.vue';
 
 library.add(faList, faBars, faTableCellsLarge);
 const MODE_TYPE_MAP = {
@@ -90,6 +92,7 @@ export default {
     FoodTable,
     FoodCardGroup,
     BasePagination,
+    LoadingBlock
   },
   data () {
     return {
@@ -100,6 +103,7 @@ export default {
       currentTown: null,
       currentPage: 1,
       pageSize: 10,
+      isLoading: false,
     }
   },
   computed: {
@@ -165,7 +169,9 @@ export default {
     },
   },
   async created() {
+    this.isLoading = true;
     this.list = await this.fetchList();
+    this.isLoading = false;
   }
 }
 </script>
